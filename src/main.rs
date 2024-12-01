@@ -1,0 +1,25 @@
+use solvers::Solver;
+use std::env;
+
+mod solvers;
+mod utils;
+
+fn main() {
+  let args: Vec<String> = env::args().collect();
+  let day = match args.get(1) {
+    Some(day) => day,
+    None => {
+      panic!("Day to run is required");
+    }
+  };
+
+  run(day);
+}
+
+fn run(day: &str) {
+  let path = format!("input/day{}", day);
+  match day {
+    "1" => solvers::day1::Day1::run(&path),
+    _ => panic!("Day not valid or not implemented"),
+  }
+}
