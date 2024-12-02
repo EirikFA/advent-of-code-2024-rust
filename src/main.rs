@@ -20,6 +20,7 @@ fn run(day: &str) {
   let path = format!("input/day{}", day);
   match day {
     "1" => solvers::day1::Day1::run(&path),
+    "2" => solvers::day2::Day2::run(&path),
     _ => panic!("Day not valid or not implemented"),
   }
 }
