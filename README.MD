@@ -1,0 +1,1 @@
+- Day 6 part 2: Yes.. There might be something clever here, maybe model a graph and find how many different edges can be inserted to create a loop.. Sounds like a brute-force, no better than just trying to insert an obstacle in front of the guard for every position and checking for a cycle.. I am using Rust after all.. ¯\\\_(ツ)\_/¯
