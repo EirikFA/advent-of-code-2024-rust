@@ -1,4 +1,4 @@
-use std::{fmt::Display, fs::read_to_string};
+use std::{fmt::Display, fs::read_to_string, time::Instant};
 
 pub mod day1;
 pub mod day2;
@@ -6,6 +6,7 @@ pub mod day3;
 pub mod day4;
 pub mod day5;
 pub mod day6;
+pub mod day7;
 
 pub trait Solver {
   type Input;
@@ -52,7 +53,13 @@ pub trait Solver {
 
     let path = format!("{}/input.txt", day_path);
     let input = Self::parse_file(&path);
+
+    let before_1 = Instant::now();
     println!("Part 1: {}", Self::part_1(&input));
+    println!("Part 1 took {:?}", before_1.elapsed());
+
+    let before_2 = Instant::now();
     println!("Part 2: {}", Self::part_2(&input));
+    println!("Part 2 took {:?}", before_2.elapsed());
   }
 }
