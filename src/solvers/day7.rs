@@ -54,10 +54,10 @@ impl Solver for Day7 {
   }
 
   fn part_2(equations: &Self::Input) -> Self::Output2 {
-    // Development build with no parallelism: ~15s
-    // Release build with no parallelism: ~3.5s
-    // Development build with parallelism: ~2s
-    // Release build with parallelism: ~0.5s
+    // Development build with no parallelism: ~9s
+    // Release build with no parallelism: ~1.8s
+    // Development build with parallelism: ~1.4s
+    // Release build with parallelism: ~0.3s
     // I love Rust
     // TODO: Maybe we can do something clever? Like actually learning to solve the problem?
     equations
@@ -86,7 +86,7 @@ impl Day7 {
         match operators[i] {
           "+" => val += *num as u64,
           "*" => val *= *num as u64,
-          "||" => val = (val.to_string() + &num.to_string()).parse().unwrap(),
+          "||" => val = val * 10_u64.pow(num.to_string().len() as u32) + num,
           _ => panic!(),
         }
         if val > *test_val {
