@@ -30,6 +30,7 @@ fn run(day: &str) {
     "9" => solvers::day9::Day9::run(&path),
     "10" => solvers::day10::Day10::run(&path),
     "11" => solvers::day11::Day11::run(&path),
+    "12" => solvers::day12::Day12::run(&path),
     _ => panic!("Day not valid or not implemented"),
   }
 }
