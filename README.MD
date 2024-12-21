@@ -2,3 +2,4 @@
 - Day 7 (part 2 specifically): Running in release and parallelizing the iterator takes it to about half a second, but maybe there's something clever to solve this faster than exponential time (about 3^9 or 3^10 operator combinations per equation with 850 equations)?
 - Day 12 part 2: Something about counting corners.
 - Day 17 part 2: Yes (no).
+- Day 20 part 2: To-do.
